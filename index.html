@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      if (sessionStorage.getItem('needRefresh') === 'true') {
+        sessionStorage.removeItem('needRefresh');
+        window.location.reload(true); 
+      }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Available Books</h1>
+    </header>
+    <main>
+        <ul id="bookList">
+            <!-- Book items will be loaded here by script.js -->
+        </ul>
+    </main>
+    <nav>
+        <button onclick="window.location.href='create.html'">Create a New Book</button>
+    </nav>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
